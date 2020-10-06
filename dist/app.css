@@ -5,14 +5,20 @@
 }
 
 .page-wrapper {
-  position: relative;
   padding: 30px;
+  margin-top: 10px;
+  position: relative;
 }
 
 header {
   height: 100px;
   line-height: 50px;
   border-bottom: 1px solid #000;
+  width: 100%;
+  position: fixed;
+  top: 0;
+  z-index: 2;
+  background: #fff;
 }
 
 .header-top {
@@ -37,5 +43,10 @@ header {
 
 main .container {
   max-width: 70%;
-  margin: 100px auto;
+  margin: calc(200px) auto;
+  overflow-y: auto;
+}
+main .container-faq {
+  line-height: 30px;
+  margin-bottom: 50px;
 }

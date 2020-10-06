@@ -17,14 +17,20 @@ $heightHeader: 100px;
 //general
 
 .page-wrapper {
-  position: relative;
   padding: 30px;
+  margin-top: 10px;
+  position: relative;
 }
 
 header {
   height: $heightHeader;
   line-height: 50px;
   border-bottom: 1px solid #000;
+  width: 100%;
+  position: fixed;
+  top: 0;
+  z-index: 2;
+  background: #fff;
 }
 
 
@@ -57,9 +63,13 @@ main {
 
   & .container {
     max-width: 70%;
-    margin: $heightHeader auto;
+    margin: calc(#{$heightHeader * 2}) auto;
+    overflow-y: auto;
     &-faq {
-      
+      line-height: 30px;
+      margin-bottom: 50px;
     }
   }
 }
+
+// footer

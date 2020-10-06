@@ -41,9 +41,9 @@ Ci sono diverse domande con relative risposte. Gestire il “Database” e la vi
     <?php foreach ($faqs as $faq) { ?>
     <li>
       <?php foreach ($faq as $k => $value) {
-        if ($key == "question") {
+        if ($k == "question") {
           echo "<h2>".$value."</h2>";
-        } else ($key == "answer") {
+        } elseif ($k == "answer") {
           echo "<p>".$value."</p>";
         }
       }

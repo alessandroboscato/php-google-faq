@@ -1,0 +1,65 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+// mixins
+
+@mixin flexStart {
+  display: flex;
+  justify-content: flex-start;
+}
+
+//variables
+$heightHeader: 100px;
+
+//general
+
+.page-wrapper {
+  position: relative;
+  padding: 30px;
+}
+
+header {
+  height: $heightHeader;
+  line-height: 50px;
+  border-bottom: 1px solid #000;
+}
+
+
+// header
+
+.header-top {
+  @include flexStart;
+}
+
+.header-bottom {
+  display: flex;
+  justify-content: space-between;
+
+  & ul {
+    display: flex;
+
+  & li {
+    list-style: none;
+    margin: 0 20px;
+
+    & a {
+      text-decoration: none;
+    }
+  }
+  }
+}
+
+//main
+main {
+
+  & .container {
+    max-width: 70%;
+    margin: $heightHeader auto;
+    &-faq {
+      
+    }
+  }
+}

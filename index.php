@@ -38,33 +38,57 @@ Ci sono diverse domande con relative risposte. Gestire il “Database” e la vi
   <title>Google FAQs</title>
 </head>
 <body>
-  <!-- header -->
-  <header>
-
-  </header>
-  <!--header -->
-  <!-- main -->
-  <main>
-      <?php foreach ($faqs as $faq) { ?>
-      <div>
-        <?php foreach ($faq as $k => $value) {
-          if ($k == "question") {
-            echo "<h2>".$value."</h2>";
-          } elseif ($k == "answer") {
-            echo "<p>".$value."</p>";
-          }
-        }
-        ?>
+  <div class="page-wrapper">
+    <!-- header -->
+    <header>
+      <div class="header-top">
+        <div class="header-logo">
+          <img src="img/googlelogo.png" alt="Logo google">
+        </div>
+        <div class="header-main">Privacy e termini</div>
       </div>
-      <?php } ?>
-  </main>
-  <!--/main -->
-  <!-- footer -->
-  <footer>
+      <div class="header-bottom">
+        <nav>
+          <ul>
+            <li><a href="#">Introduzione</a></li>
+            <li><a href="#">Norme sulla privacy</a></li>
+            <li><a href="#">Termini di servizio</a></li>
+            <li><a href="#">Tecnologie</a></li>
+            <li><a href="#">Domande frequenti</a></li>
+          </ul>
+        </nav>
+        <div class="header-user">
+          <div class="user-avatar"></div>
+          <div class="user-mail">alessandro.boscato@gmail.com</div>
+        </div>
+      </div>
 
-  </footer>
-  <!-- footer -->
+    </header>
+    <!--header -->
+    <!-- main -->
+    <main>
+      <div class="container">
+        <?php foreach ($faqs as $faq) { ?>
+        <div class="container-faq">
+          <?php foreach ($faq as $k => $value) {
+            if ($k == "question") {
+              echo "<h2>".$value."</h2>";
+            } elseif ($k == "answer") {
+              echo "<p>".$value."</p>";
+            }
+          }
+          ?>
+        </div>
+        <?php } ?>
+      </div>
 
+    </main>
+    <!--/main -->
+    <!-- footer -->
+    <footer>
 
+    </footer>
+    <!-- footer -->
+  </div>
 </body>
 </html>

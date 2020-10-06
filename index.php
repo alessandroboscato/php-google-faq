@@ -34,23 +34,37 @@ Ci sono diverse domande con relative risposte. Gestire il “Database” e la vi
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="dist/app.css">
   <title>Google FAQs</title>
 </head>
 <body>
-  <ul>
-    <?php foreach ($faqs as $faq) { ?>
-    <li>
-      <?php foreach ($faq as $k => $value) {
-        if ($k == "question") {
-          echo "<h2>".$value."</h2>";
-        } elseif ($k == "answer") {
-          echo "<p>".$value."</p>";
+  <!-- header -->
+  <header>
+
+  </header>
+  <!--header -->
+  <!-- main -->
+  <main>
+      <?php foreach ($faqs as $faq) { ?>
+      <div>
+        <?php foreach ($faq as $k => $value) {
+          if ($k == "question") {
+            echo "<h2>".$value."</h2>";
+          } elseif ($k == "answer") {
+            echo "<p>".$value."</p>";
+          }
         }
-      }
-      ?>
-    </li>
-    <?php } ?>
-  </ul>
+        ?>
+      </div>
+      <?php } ?>
+  </main>
+  <!--/main -->
+  <!-- footer -->
+  <footer>
+
+  </footer>
+  <!-- footer -->
+
 
 </body>
 </html>
